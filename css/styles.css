@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+:root {
+  --gray-color-900: #17181a;
+  --gray-color-600: #303136;
+  --gray-color-200: #7e7f85;
+  --orange-color-300: #ffa155;
+  --white-color: #ffffff;
+  --red-color: #640000;
+  --pink-color: #b883f5;
+  --dark-pink-color: #810056;
+  --light-blue-color: #01a2e2;
+  --black-color: #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  padding: 1rem;
+  background: var(--gray-color-900);
+  background-image: linear-gradient(
+    to bottom,
+    #ffc2fa,
+    #ded3ff,
+    #bde2ff,
+    #abedff,
+    #aff5ff
+  );
+}
+
+h1,
+h2 {
+  color: var(--dark-pink-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.calculator {
+  background-image: linear-gradient(
+    to bottom,
+    #ffc2fa,
+    #ded3ff,
+    #bde2ff,
+    #abedff,
+    #aff5ff
+  );
+  border: 1px solid var(--white-color);
+  max-width: 380px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.3);
+}
+
+.screen {
+  font-size: 1.4rem;
+  height: 60px;
+  color: var(--white-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.screen input {
+  text-align: right;
+  background: var(--white-color);
+  color: var(--black-color);
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    ". op-9 op-8 reset"
+    "pi op-6 op-5 op-4"
+    "n-7 n-8 n-9 op-3"
+    "n-4 n-5 n-6 op-2"
+    "n-1 n-2 n-3 op-1"
+    ". n-0 point equal";
+  gap: 0.5rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.btns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pink-color);
+  color: var(--white-color);
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btns button:active {
+  transform: scale(0.9);
+}
+
+.btns button[data-btn="reset"] {
+  grid-area: reset;
+}
+
+.btn-number[data-btn="0"] {
+  grid-area: n-0;
+}
+.btn-number[data-btn="1"] {
+  grid-area: n-1;
+}
+.btn-number[data-btn="2"] {
+  grid-area: n-2;
+}
+.btn-number[data-btn="3"] {
+  grid-area: n-3;
+}
+.btn-number[data-btn="4"] {
+  grid-area: n-4;
+}
+.btn-number[data-btn="5"] {
+  grid-area: n-5;
+}
+.btn-number[data-btn="6"] {
+  grid-area: n-6;
+}
+.btn-number[data-btn="7"] {
+  grid-area: n-7;
+}
+.btn-number[data-btn="8"] {
+  grid-area: n-8;
+}
+.btn-number[data-btn="9"] {
+  grid-area: n-9;
+}
+.btn-number.pi {
+  grid-area: pi;
+}
+
+.btn-op[data-btn="+"] {
+  grid-area: op-1;
+}
+.btn-op[data-btn="-"] {
+  grid-area: op-2;
+}
+.btn-op[data-btn="*"] {
+  grid-area: op-3;
+}
+.btn-op[data-btn="/"] {
+  grid-area: op-4;
+}
+.btn-op[data-btn="**"] {
+  grid-area: op-5;
+}
+.btn-op[data-btn="%"] {
+  grid-area: op-6;
+}
+.btn-op[data-btn=")"] {
+  grid-area: op-8;
+}
+.btn-op[data-btn="("] {
+  grid-area: op-9;
+}
+.btn-op[data-btn="."] {
+  grid-area: point;
+}
+.btn-op[data-btn="="] {
+  grid-area: equal;
+  background: var(--light-blue-color);
+}
+
+.table h2 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--white-color);
+  height: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+}
+
+table th {
+  border: 1px solid var(--white-color);
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+table td {
+  border: 1px solid var(--white-color);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: var(--black-color);
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media (width >= 768px) {
+  body {
+    flex-direction: row;
+  }
+
+  table {
+    max-width: 450px;
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/calculator.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div>
+      <h1>Calculadora Web</h1>
+      <div class="calculator">
+        <div class="screen">
+          <input type="text" disabled />
+        </div>
+        <div class="btns">
+          <button class="reset" data-btn="reset">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-square-x"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#8B007F"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z"
+              />
+              <path d="M9 9l6 6m0 -6l-6 6" />
+            </svg>
+          </button>
+
+          <button class="btn-number" data-btn="0">0</button>
+          <button class="btn-number" data-btn="1">1</button>
+          <button class="btn-number" data-btn="2">2</button>
+          <button class="btn-number" data-btn="3">3</button>
+          <button class="btn-number" data-btn="4">4</button>
+          <button class="btn-number" data-btn="5">5</button>
+          <button class="btn-number" data-btn="6">6</button>
+          <button class="btn-number" data-btn="7">7</button>
+          <button class="btn-number" data-btn="8">8</button>
+          <button class="btn-number" data-btn="9">9</button>
+          <button class="btn-number pi" data-btn="3.14159265359">π</button>
+
+          <button class="btn-op" data-btn="=">=</button>
+          <button class="btn-op" data-btn="-">-</button>
+          <button class="btn-op" data-btn="+">+</button>
+          <button class="btn-op" data-btn="*">x</button>
+          <button class="btn-op" data-btn="/">/</button>
+          <button class="btn-op" data-btn="**">^</button>
+          <button class="btn-op" data-btn="%">%</button>
+          <button class="btn-op" data-btn=".">.</button>
+          <button class="btn-op" data-btn="(">(</button>
+          <button class="btn-op" data-btn=")">)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="table">
+      <h2>Tabla de ayuda</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Símbolo</th>
+            <th>Operación</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>+</td>
+            <td>Suma</td>
+            <td>17+5 = 22</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Resta</td>
+            <td>8-5 = 3</td>
+          </tr>
+          <tr>
+            <td>x</td>
+            <td>Multiplicación</td>
+            <td>12*3 = 36</td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>División</td>
+            <td>25/5 = 5</td>
+          </tr>
+          <tr>
+            <td>^</td>
+            <td>Potenciación</td>
+            <td>2^3 = 8</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Módulo (residuo de la división)</td>
+            <td>12%5 = 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
